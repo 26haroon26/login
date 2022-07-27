@@ -353,10 +353,14 @@ function eye() {
     console.log(password);
 
     if (password === "password") {
+        document.getElementById('icon').classList.remove('fa-eye');
+        document.getElementById('icon').classList.add('fa-eye-slash');
         document.getElementById('password').setAttribute("type", "text");
     }
     else {
         document.getElementById('password').setAttribute('type', 'password');
+        document.getElementById('icon').classList.remove('fa-eye-slash');
+        document.getElementById('icon').classList.add('fa-eye');
         console.log(password);
     }
 }
@@ -410,11 +414,11 @@ function edit() {
     users[userIndex].user_email = updateEmail;
     users[userIndex].user_address = updateAddress;
 
-    localStorage.setItem("users", JSON.stringify(users[userIndex]));
+    localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("logged in", JSON.stringify(users[userIndex]));
 
-    users[userIndex] = localStorage.getItem("users");
-    users[userIndex] = JSON.parse(users[userIndex]);
+    // users[userIndex] = localStorage.getItem("users");
+    // users[userIndex] = JSON.parse(users[userIndex]);
 
     document.getElementById('userName').innerText = users[userIndex].user_firstname;
     document.getElementById('userEmail').innerText = users[userIndex].user_email;

@@ -230,9 +230,10 @@ footer {
     width: 100%;
     text-align: center;
 }#icon{
-    position: absolute;
-    top: 56%;
-    left: 64%;
+    position: relative;
+    top: 26px;
+    left: 185px;
+    color: red;
 }
 
 /* w3schools */
