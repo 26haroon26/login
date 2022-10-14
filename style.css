@@ -75,7 +75,11 @@ nav button:hover {
 }
 
 form > div {
-  text-align: center;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 nav {
@@ -161,9 +165,8 @@ legend {
   text-align: center;
 }
 #icon {
-  position: relative;
-  top: 26px;
-  left: 185px;
+  position: absolute;
+  margin-right: 5px;
   color: red;
 }
 
